@@ -11,7 +11,7 @@ Step 1 - Download the files manually or git clone https://github.com/freshdemo/m
 
 Step 2 - Build the image with; docker build . -t mailer
 
-Step 3 - Create the container from the image with; docker run -p 25:25 -p 143:143 -ti <image number which can be found using docker images>
+Step 3 - Create the container from the image with; docker run -p 25:25 -p 143:143 -ti "<image number which can be found using docker images>"
 
 Step 4 - Start the services with /etc/init.d/dovecot start ; /etc/init.d/exim4 start
 
