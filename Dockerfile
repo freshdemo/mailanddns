@@ -9,6 +9,7 @@ RUN echo phishme:phishme | chpasswd
 # If you want to make changes it can be beneficial to add things like the following
 #RUN apt-get install --assume-yes vim lsof ssh netcat
 
+ADD /resolv.conf /etc/resolv.com
 ADD /bind9/ /etc/bind/
 ADD /exim4/ /etc/exim4/
 ADD /start.sh /root/start.sh
