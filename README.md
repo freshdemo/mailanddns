@@ -1,8 +1,6 @@
-This repo contains a Dockerfile and a few configuration files that will allow you to deploy email and DNS servers inside a Docker container. The servers are configured loosely for demonstration purposes and should not be used for production without modification to the configurations.
+The purpose of this container is to demonstrate various stages of the attack chain. The servers are configured loosely for demonstration purposes and should not be used for production without modification to the configurations.
 
-The container runs Debian, Dovecot, Exim4, and Bind9.
-
-The purpose of this container is to demonstrate various stages of the attack chain. 
+This repo contains a Dockerfile and a few configuration files that will allow you to deploy email and DNS servers inside a Docker container. The container runs Debian, Dovecot, Exim4, and Bind9. 
 
 You can run it directly from your labtop for local demonstrations. It can be run from a Docker instance in any IaaS. It doesn't run well in AWS/Azure container services due to some current limitations (Azure can't change container hostnames which makes email difficult, Azure does not want email or DNS servers and changing the DNS port is difficult on most clients, AWS won't allow UDP currently, and AWS starts a cluster of t3.micro instances so not just a container service and probably overkill).
 
