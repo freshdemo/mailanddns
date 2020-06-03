@@ -11,7 +11,11 @@ Step 1 - Download the files manually or git clone https://github.com/freshdemo/m
 
 Step 2 - Build the image with; docker build . -t freshdemo/mailanddns
 
+<<<<<<< HEAD
 Step 3 - Create the container from the image with (Microsoft doesn't even really want mail servers in Azure hence the port change); docker run -h example.com -p 2225:25 -p 993:993 -p 53:53 --dns 127.0.0.1 -d (image number which can be found using <docker images>)
+=======
+Step 3 - Create the container from the image with (Microsoft doesn't even really want mail servers in Azure hence the port change); docker run -h example.com -p 2225:2225 -p 993:993 -p 53:53/udp --dns 127.0.0.1 -d (image number which can be found using <docker images>)
+>>>>>>> 3dfda6539466fe50aa067d6008a38961e95eddbb
 
 Step 4 (optional) - Edit the zone files in /etc/bind/ which currently host example.com for email and a couple of known malicious domains.
 
